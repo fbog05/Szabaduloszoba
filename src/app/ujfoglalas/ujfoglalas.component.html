@@ -1,0 +1,39 @@
+<div class="egesz">
+    <h2 class="p-4">Új Foglalás</h2>
+
+    <div class="pb-5">
+        <form (ngSubmit)="submitForm()" #foglalasForm="ngForm">
+            <fieldset>
+                <div>
+                    <label class="fw-medium" for="nev">Név:</label>
+                    <input type="string" id="nev" name="nev" [(ngModel)]="foglalas.nev" required>
+                </div>
+                <div>
+                    <label class="fw-medium" for="iranyitoszam">Irányítószám:</label>
+                    <input type="number" id="iranyitoszam" name="iranyitoszam" [(ngModel)]="foglalas.iranyitoszam" required>
+                </div>
+                <div>
+                    <label class="fw-medium" for="cim">Cím:</label>
+                    <input type="string" id="cim" name="cim" [(ngModel)]="foglalas.cim" required>
+                </div>
+                <div>
+                    <label class="fw-medium" for="datum">Dátum:</label>
+                    <input type="date" id="datum" name="datum" [(ngModel)]="foglalas.datum" required>
+                </div>
+                <div>
+                    <label class="fw-medium" for="fo">Fő (2-16):</label>
+                    <input type="number" id="fo" name="fo" [(ngModel)]="foglalas.fo" min="2" max="16" required>
+                </div>
+                <div class="col text-center">
+                    <button type="submit" [disabled]="foglalasForm.invalid">Foglalás elküldése</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+        <div class="footer text-center p-2">
+            <p class="copy pt-3 text-light">
+                Szabadulószoba &copy; 2024  
+            </p>
+        </div>
+</div>

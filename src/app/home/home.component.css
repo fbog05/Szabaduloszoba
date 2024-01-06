@@ -1,0 +1,21 @@
+*{
+    background-color: #BCE9F3;
+}
+
+img{
+    width: 1000px;
+    height: 600px;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer{
+    border-top: 1px solid #C0B0B1;
+    background-color: #7ED9EC;
+}
+
+.copy{
+    background-color: #7ED9EC;
+}
